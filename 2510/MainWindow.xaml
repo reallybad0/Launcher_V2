@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_2510"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="419.5" Width="828"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        >
     <Grid>
-        
+        <ListBox Name="trys" HorizontalAlignment="Left" Height="276" Margin="29,92,0,0" VerticalAlignment="Top" Width="277" />
+        <Button Content="Otevřít" HorizontalAlignment="Left" Height="61" Margin="329,169,0,0" VerticalAlignment="Top" Width="184" Click="Spoustec_Click"/>
+        <ComboBox Name="typsouboru"  HorizontalAlignment="Left" Margin="48,40,0,0" VerticalAlignment="Top" Width="232" Height="36" SelectionChanged="typsouboru_SelectionChanged"/>
+        <Button Name="infowrite"  Visibility="Hidden" Content="Vypsat informace" HorizontalAlignment="Left" Height="38" Margin="329,235,0,0" VerticalAlignment="Top" Width="184" Click="infowrite_Click" RenderTransformOrigin="0.87,0.684"/>
+        <TextBox Name="vypisinfo" Visibility="Hidden" HorizontalAlignment="Left" Height="127" Margin="329,26,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="281"/>
+        <Button Name="Ulozit" Content="Uložit" Visibility="Hidden" HorizontalAlignment="Left" Height="47" Margin="529,169,0,0" VerticalAlignment="Top" Width="81" Click="Ulozit_Click"/>
+
     </Grid>
 </Window>
