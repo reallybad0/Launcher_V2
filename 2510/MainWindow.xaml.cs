@@ -26,21 +26,7 @@ namespace _2510
     /// </summary>
     public partial class MainWindow : Window
     {
-        /*
-         //Now Create all of the directories
-    foreach (string dirPath in Directory.GetDirectories(SourcePath, "*",
-        SearchOption.AllDirectories))
-        Directory.CreateDirectory(dirPath.Replace(SourcePath, DestinationPath));
-//Copy all the files & Replaces any files with the same name
-    foreach (string newPath in Directory.GetFiles(SourcePath, "*.*",
-        SearchOption.AllDirectories))
-        File.Copy(newPath, newPath.Replace(SourcePath, DestinationPath), true);
-    
-             */
-
-        //http://www.wpf-tutorial.com/dialogs/the-openfiledialog/
-        //adresy
-       
+        //adresy     
         string[] filesa;
 
         //trys = seznam!  
@@ -58,7 +44,6 @@ namespace _2510
             filesa = finder.SearchFiles(lokace, typy[1]);
             for (int u = 0; u < filesa.Count(); u++)
             {
-                //string spoustec = GenSpoust();
                 string spoustec = filesa[u];
                 string slozka = System.IO.Path.GetDirectoryName(spoustec);
 
@@ -68,9 +53,6 @@ namespace _2510
                     string textInfoClanku = "Informace o projektu";
                     File.WriteAllText(adresa, textInfoClanku);
                 }
-                //string slozka = System.IO.Path.GetDirectoryName(spoustec);
-
-
             }
         }
 
